@@ -27,6 +27,13 @@ CLASS zcl_mat_cop IMPLEMENTATION. " Starts the implementation of the class
         rv_is_active = abap_true. " Sets return value to true (active) for MAT_001
       WHEN 'MAT_002'.
         rv_is_active = abap_false. " Sets return value to false (blocked) for MAT_002
+      WHEN 'MAT_003'.
+        rv_is_active = abap_true. 
+      WHEN 'MAT_004'.
+        rv_is_active = abap_false. 
+      WHEN 'MAT_005'.
+        rv_is_active = abap_true. 
+  
       WHEN OTHERS. " For any other material number not explicitly handled above
         WRITE : / 'Not Found'. 
     ENDCASE.
